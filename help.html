@@ -1,107 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Help - Going for Gold</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Going for Gold</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="help.html">Help</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <h1>Going for Gold</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="help.html">Help</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Going For Gold Fitness Tracker</h2>
-            <p>Turn your daily activity into a fun, competitive fitness journey using your Apple Health data.</p>
-        </section>
+      <section>
+        <h3>Getting Started</h3>
+        <ol>
+          <li>Grant Apple Health access</li>
+          <li>Set your medal targets</li>
+          <li>
+            Set apple watch on/off and set your age to track workouts (in
+            Settings)
+          </li>
+          <li>Optional: Create a cloud account to join leagues</li>
+          <li>View your progress in the app</li>
+        </ol>
+      </section>
 
-        <section>
-            <h3>What it does:</h3>
-            <ul>
-                <li>Converts your steps and workouts into points</li>
-                <li>Set your own monthly targets to earn bronze, silver, and gold medals</li>
-                <li>Compete with friends in private leagues</li>
-            </ul>
-        </section>
+      <section>
+        <h3>How Points Work</h3>
 
-        <section>
-            <h3>Key Features:</h3>
-            <ul>
-                <li>Works with Apple Health (steps and workouts from any device that syncs to Apple Health)</li>
-                <li>Age-adjusted workout intensity targets</li>
-                <li>Privacy-focused: only points are shared, never your health data</li>
-                <li>Track progress month by month</li>
-            </ul>
-        </section>
+        <h4>Daily Steps:</h4>
+        <ul>
+          <li>7k steps = 3 points</li>
+          <li>10k steps = 5 points</li>
+          <li>12.5k+ steps = 8 points</li>
+        </ul>
 
-        <section>
-            <h3>Getting Started</h3>
-            <ol>
-                <li>Grant Apple Health access</li>
-                <li>Set your medal targets</li>
-                <li>Set apple watch on/off and set your age to track workouts (in Settings)</li>
-                <li>Optional: Create a cloud account to join leagues</li>
-                <li>View your progress in the app</li>
-            </ol>
-        </section>
+        <h4>Workouts (30+ minutes):</h4>
+        <p>
+          Points based on heart rate intensity relative to your age, see
+          Advanced notes below.
+        </p>
 
-        <section>
-            <h3>How Points Work</h3>
-            
-            <h4>Daily Steps:</h4>
-            <ul>
-                <li>7k steps = 3 points</li>
-                <li>10k steps = 5 points</li>
-                <li>12.5k+ steps = 8 points</li>
-            </ul>
+        <p>
+          <em
+            >Default targets: 120 points (bronze), 140 (silver), 160 (gold) -
+            fully customizable</em
+          >
+        </p>
+      </section>
 
-            <h4>Workouts (30+ minutes):</h4>
-            <p>Points based on heart rate intensity relative to your age, see Advanced notes below.</p>
+      <section>
+        <h3>Advanced Notes</h3>
 
-            <p><em>Default targets: 120 points (bronze), 140 (silver), 160 (gold) - fully customizable</em></p>
-        </section>
+        <h4>Workout Points Calculation</h4>
+        <p>
+          For workouts with at least 30 minutes duration, points are awarded
+          based on average heart rate:
+        </p>
 
-        <section>
-            <h3>Advanced Notes</h3>
-            
-            <h4>Workout Points Calculation</h4>
-            <p>For workouts with at least 30 minutes duration, points are awarded based on average heart rate:</p>
-            
-            <ul>
-                <li><strong>5 points:</strong> Average heart rate ≥ (220 - user age) × 0.6</li>
-                <li><strong>8 points:</strong> Average heart rate ≥ (220 - user age) × 0.7</li>
-            </ul>
+        <ul>
+          <li>
+            <strong>5 points:</strong> Average heart rate ≥ (220 - user age) ×
+            0.6
+          </li>
+          <li>
+            <strong>8 points:</strong> Average heart rate ≥ (220 - user age) ×
+            0.7
+          </li>
+        </ul>
 
-            <h4>Examples:</h4>
-            
-            <p><strong>For age 49:</strong></p>
-            <ul>
-                <li>Max HR: 171 bpm (220 - 49)</li>
-                <li>5 points: 103+ bpm (60% of 171)</li>
-                <li>8 points: 120+ bpm (70% of 171)</li>
-            </ul>
+        <h4>Examples:</h4>
 
-            <p><strong>For age 20:</strong></p>
-            <ul>
-                <li>Max HR: 200 bpm (220 - 20)</li>
-                <li>5 points: 120+ bpm</li>
-                <li>8 points: 140+ bpm</li>
-            </ul>
+        <p><strong>For age 49:</strong></p>
+        <ul>
+          <li>Max HR: 171 bpm (220 - 49)</li>
+          <li>5 points: 103+ bpm (60% of 171)</li>
+          <li>8 points: 120+ bpm (70% of 171)</li>
+        </ul>
 
-            <p><em>User age can be set in Settings.</em></p>
-        </section>
+        <p><strong>For age 20:</strong></p>
+        <ul>
+          <li>Max HR: 200 bpm (220 - 20)</li>
+          <li>5 points: 120+ bpm</li>
+          <li>8 points: 140+ bpm</li>
+        </ul>
+
+        <p><em>User age can be set in Settings.</em></p>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Going for Gold</p>
+      <p>&copy; 2024 Going for Gold</p>
     </footer>
-</body>
+  </body>
 </html>
