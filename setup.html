@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Help - Going for Gold</title>
     <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Help and instructions for the Going for Gold fitness tracking app."
+    />
   </head>
   <body>
     <header>
@@ -20,70 +24,84 @@
     <main>
       <section>
         <h3>Getting Started</h3>
-        <ol>
-          <li>
-            On installing the app, grant Apple Health access to allow Going For
-            Gold to start tracking steps and workouts. See
-            <a
-              href="https://dp2020-dev.github.io/going-for-gold-site/privacy.html"
-              >Privacy policy</a
-            >
-            to see how your health data remains private.
-          </li>
-          <img
-            src="images/grantAppleHealthAccess16pro.jpg"
-            alt="Grant apple health access"
-            style="max-width: 300px; height: auto"
-          />
 
-          With Healthkit settings allowed, clicking Request Health Data
-          initially (or Refresh Data) will fetch your health data and start
+        <p>
+          On installing the app, grant Apple Health access to allow Going For
+          Gold to start tracking steps and workouts. See
+          <a
+            href="https://dp2020-dev.github.io/going-for-gold-site/privacy.html"
+            >Privacy policy</a
+          >
+          to see how your health data remains private.
+        </p>
+
+        <img
+          class="media-left"
+          src="images/grantAppleHealthAccess16pro.jpg"
+          alt="Grant Apple Health access screen"
+          style="max-width: 300px; height: auto"
+        />
+
+        <p>
+          With HealthKit settings allowed, clicking **Request Health Data**
+          initially (or **Refresh Data**) will fetch your health data and start
           tracking your points.
-          <img
-            src="images/Refresh.jpg"
-            alt="Grant apple health access"
-            style="max-width: 300px; height: auto"
-          />
-          <li>
-            In Settings, set your personal medal targets- give yourself a target
-            to get those hear-earned medals!
-          </li>
-          <li>
-            <p>
-              <em
-                >Default targets: 120 points (bronze), 140 (silver), 160 (gold)
-                - fully customizable</em
-              >
-              <img
-                src="images/settingsNoWorkout16pro.jpg"
-                alt="Grant apple health access"
-                style="max-width: 300px; height: auto"
-              />
-            </p>
-            To include workout data, set apple watch access on and set your age
-            to track workouts (in Settings).
-            <a href="#workouts-30-plus">Read more on workouts here.</a>
-            <img
-              src="selectAgeWorkouts16pro.jpg"
-              alt="Workouts on, set age"
-              style="max-width: 300px; height: auto"
-            />
-          </li>
-          images/selectAgeWorkouts16pro.jpg
-          <li>Optional: Create a cloud account to join leagues</li>
-          <li>View your progress in the app</li>
-        </ol>
+        </p>
+
+        <img
+          class="media-left"
+          src="images/Refresh.jpg"
+          alt="Refresh data button"
+          style="max-width: 300px; height: auto"
+        />
+
+        <p>
+          In Settings, set your personal medal targets—give yourself a target to
+          get those hard-earned medals!
+        </p>
+
+        <p>
+          <em
+            >Default targets: 120 points (bronze), 140 (silver), 160 (gold) -
+            fully customizable</em
+          >
+        </p>
+
+        <img
+          class="media-left"
+          src="images/settingsNoWorkout16pro.jpg"
+          alt="Settings screen showing medal targets"
+          style="max-width: 300px; height: auto"
+        />
+
+        <p>
+          To include workout data, set **apple watch access on** and set your
+          **age** to track workouts (in Settings).
+          <a href="#workouts-30-plus">Read more on workouts here.</a>
+        </p>
+
+        <img
+          class="media-left"
+          src="images/selectAgeWorkouts16pro.jpg"
+          alt="Workouts on, set age"
+          style="max-width: 300px; height: auto"
+        />
+
+        <p>Optional: Create a cloud account to join leagues.</p>
+        <p>View your progress in the app.</p>
       </section>
+
+      ---
 
       <section>
         <h3>How Points Work</h3>
 
         <h4>Daily Steps:</h4>
-        <ul>
-          <li>7k steps = 3 points</li>
-          <li>10k steps = 5 points</li>
-          <li>12.5k+ steps = 8 points</li>
-        </ul>
+        <p>
+          7k steps = 3 points<br />
+          10k steps = 5 points<br />
+          12.5k+ steps = 8 points
+        </p>
 
         <h4 id="workouts-30-plus">Workouts (30+ minutes):</h4>
         <p>
@@ -91,6 +109,8 @@
           Advanced notes below.
         </p>
       </section>
+
+      ---
 
       <section>
         <h3>Advanced Notes</h3>
@@ -100,35 +120,47 @@
           For workouts with at least 30 minutes duration, points are awarded
           based on average heart rate:
         </p>
-
-        <ul>
-          <li>
-            <strong>5 points:</strong> Average heart rate ≥ (220 - user age) ×
-            0.6
-          </li>
-          <li>
-            <strong>8 points:</strong> Average heart rate ≥ (220 - user age) ×
-            0.7
-          </li>
-        </ul>
+        <p>
+          <strong>5 points:</strong> Average heart rate $\geq$ (220 - user age)
+          $\times$ 0.6<br />
+          <strong>8 points:</strong> Average heart rate $\geq$ (220 - user age)
+          $\times$ 0.7
+        </p>
 
         <h4>Examples:</h4>
 
         <p><strong>For age 49:</strong></p>
-        <ul>
-          <li>Max HR: 171 bpm (220 - 49)</li>
-          <li>5 points: 103+ bpm (60% of 171)</li>
-          <li>8 points: 120+ bpm (70% of 171)</li>
-        </ul>
+        <p>
+          Max HR: 171 bpm (220 - 49)<br />
+          5 points: 103+ bpm (60% of 171)<br />
+          8 points: 120+ bpm (70% of 171)
+        </p>
 
         <p><strong>For age 20:</strong></p>
-        <ul>
-          <li>Max HR: 200 bpm (220 - 20)</li>
-          <li>5 points: 120+ bpm</li>
-          <li>8 points: 140+ bpm</li>
-        </ul>
+        <p>
+          Max HR: 200 bpm (220 - 20)<br />
+          5 points: 120+ bpm<br />
+          8 points: 140+ bpm
+        </p>
 
         <p><em>User age can be set in Settings.</em></p>
+      </section>
+
+      ---
+
+      <section>
+        <h3>Competitions</h3>
+        <p>
+          In My Competitions, you can create or join private leagues to compete
+          against friends.
+        </p>
+        <p>
+          This requires creating a cloud account (email + password) to sync your
+          points securely. To create an account, follow the prompts in My
+          Competitions, the **Sign Up** link (or sign in if you've already made
+          an account).
+        </p>
+        <p>You can check your cloud status in Settings.</p>
       </section>
     </main>
 
