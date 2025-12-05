@@ -82,12 +82,14 @@ footer {
 
 /* CSS for Image Alignment and Text Wrapping */
 .media-left {
-  float: left; /* Pushes the image to the left */
+  float: left; /* Keeps the image aligned left */
   margin-right: 20px; /* Adds space between the image and the text */
-  margin-bottom: 20px; /* Adds space below the image */
+  margin-bottom: 20px; /* Adds space below the image, separating it from the block below */
 }
 
-/* Clearfix for sections containing floating elements to prevent layout issues */
-section {
-  overflow: auto; /* A simple way to contain floating elements */
+/* FIX: This class ensures each image/text pairing starts on a new line and contains the float */
+.image-block {
+  clear: both; /* Crucial: Forces this block below any previous floating element */
+  overflow: auto; /* Clears the float within this container */
+  margin-bottom: 20px; /* Adds visual space between the image blocks, equivalent to a line break */
 }
