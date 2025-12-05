@@ -11,7 +11,7 @@
       <h1>Going for Gold</h1>
       <nav>
         <a href="index.html">Home</a>
-        <a href="help.html">Help</a>
+        <a href="setup.html">Set up</a>
         <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -21,25 +21,55 @@
       <section>
         <h3>Getting Started</h3>
         <ol>
-          <li>On installing the app, grant Apple Health access</li>
+          <li>
+            On installing the app, grant Apple Health access to allow Going For
+            Gold to start tracking steps and workouts. See
+            <a
+              href="https://dp2020-dev.github.io/going-for-gold-site/privacy.html"
+              >Privacy policy</a
+            >
+            to see how your health data remains private.
+          </li>
           <img
-            src="images/settingsNoWorkout16pro.jpg"
+            src="images/grantAppleHealthAccess16pro.jpg"
             alt="Grant apple health access"
             style="max-width: 300px; height: auto"
           />
-          />
 
-          <li>In Settings, set your personal medal targets</li>
+          With Healthkit settings allowed, clicking Request Health Data
+          initially (or Refresh Data) will fetch your health data and start
+          tracking your points.
+          <img
+            src="images/Refresh.jpg"
+            alt="Grant apple health access"
+            style="max-width: 300px; height: auto"
+          />
+          <li>
+            In Settings, set your personal medal targets- give yourself a target
+            to get those hear-earned medals!
+          </li>
           <li>
             <p>
               <em
                 >Default targets: 120 points (bronze), 140 (silver), 160 (gold)
                 - fully customizable</em
               >
+              <img
+                src="images/settingsNoWorkout16pro.jpg"
+                alt="Grant apple health access"
+                style="max-width: 300px; height: auto"
+              />
             </p>
-            Set apple watch on/off and set your age to track workouts (in
-            Settings)
+            To include workout data, set apple watch access on and set your age
+            to track workouts (in Settings).
+            <a href="#workouts-30-plus">Read more on workouts here.</a>
+            <img
+              src="selectAgeWorkouts16pro.jpg"
+              alt="Workouts on, set age"
+              style="max-width: 300px; height: auto"
+            />
           </li>
+          images/selectAgeWorkouts16pro.jpg
           <li>Optional: Create a cloud account to join leagues</li>
           <li>View your progress in the app</li>
         </ol>
@@ -55,9 +85,9 @@
           <li>12.5k+ steps = 8 points</li>
         </ul>
 
-        <h4>Workouts (30+ minutes):</h4>
+        <h4 id="workouts-30-plus">Workouts (30+ minutes):</h4>
         <p>
-          Points based on heart rate intensity relative to your age, see
+          Points are based on heart rate intensity relative to your age, see
           Advanced notes below.
         </p>
       </section>
