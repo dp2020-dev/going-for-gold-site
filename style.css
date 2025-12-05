@@ -80,16 +80,33 @@ footer {
   color: #666;
 }
 
-/* CSS for Image Alignment and Text Wrapping */
-.media-left {
-  float: left; /* Keeps the image aligned left */
-  margin-right: 20px; /* Adds space between the image and the text */
-  margin-bottom: 20px; /* Adds space below the image, separating it from the block below */
+/* --- NEW CSS FOR LAYOUT FIX (Replace old float CSS) --- */
+
+/* 1. Sets up the container for image and text */
+.media-container {
+  display: flex; /* Use Flexbox for alignment */
+  align-items: flex-start; /* Aligns items to the top (important for text flow) */
+  margin-bottom: 30px; /* Adds a clear vertical space after each block */
+  gap: 20px; /* Adds space between the image and the text */
 }
 
-/* FIX: This class ensures each image/text pairing starts on a new line and contains the float */
-.image-block {
-  clear: both; /* Crucial: Forces this block below any previous floating element */
-  overflow: auto; /* Clears the float within this container */
-  margin-bottom: 20px; /* Adds visual space between the image blocks, equivalent to a line break */
+/* 2. Styles the image within the container */
+.media-left-fixed {
+  /* No need for float anymore. It's automatically left by Flexbox. */
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  /* max-width is handled inline, but you can set it here too if you prefer: */
+  /* max-width: 300px; */
 }
+
+/* 3. Styles the paragraph next to the image */
+.media-container p {
+  flex-grow: 1; /* Allows the paragraph to take up remaining space */
+}
+
+/* Optional: Removes any old, problematic float styles */
+.media-left {
+  float: none !important; /* Forces the removal of old float properties if they exist */
+  margin-right: 0 !important;
+}
+
+/* --- END OF NEW CSS --- */
