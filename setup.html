@@ -9,6 +9,40 @@
       name="description"
       content="Help and instructions for the Going for Gold fitness tracking app."
     />
+    <style>
+      .collapsible-header {
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s ease;
+      }
+
+      .collapsible-header:hover {
+        color: #0066cc;
+      }
+
+      .chevron {
+        font-size: 0.8em;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+      }
+
+      .chevron.rotated {
+        transform: rotate(180deg);
+      }
+
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+      }
+
+      .collapsible-content.open {
+        max-height: 2000px;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -128,37 +162,45 @@
       ---
 
       <section>
-        <h3 id="advanced-notes">Advanced Notes</h3>
+        <h3
+          id="advanced-notes"
+          class="collapsible-header"
+          onclick="toggleSection('advanced-content')"
+        >
+          Advanced Notes <span class="chevron" id="advanced-chevron">▼</span>
+        </h3>
 
-        <h4>Workout Points Calculation</h4>
-        <p>
-          For workouts with at least 30 minutes duration, points are awarded
-          based on average heart rate:
-        </p>
-        <p>
-          <strong>5 points:</strong> Average heart rate $\geq$ (220 - user age)
-          $\times$ 0.6<br />
-          <strong>8 points:</strong> Average heart rate $\geq$ (220 - user age)
-          $\times$ 0.7
-        </p>
+        <div id="advanced-content" class="collapsible-content">
+          <h4>Workout Points Calculation</h4>
+          <p>
+            For workouts with at least 30 minutes duration, points are awarded
+            based on average heart rate:
+          </p>
+          <p>
+            <strong>5 points:</strong> Average heart rate $\geq$ (220 - user
+            age) $\times$ 0.6<br />
+            <strong>8 points:</strong> Average heart rate $\geq$ (220 - user
+            age) $\times$ 0.7
+          </p>
 
-        <h4>Examples:</h4>
+          <h4>Examples:</h4>
 
-        <p><strong>For age 49:</strong></p>
-        <p>
-          Max HR: 171 bpm (220 - 49)<br />
-          5 points: 103+ bpm (60% of 171)<br />
-          8 points: 120+ bpm (70% of 171)
-        </p>
+          <p><strong>For age 49:</strong></p>
+          <p>
+            Max HR: 171 bpm (220 - 49)<br />
+            5 points: 103+ bpm (60% of 171)<br />
+            8 points: 120+ bpm (70% of 171)
+          </p>
 
-        <p><strong>For age 20:</strong></p>
-        <p>
-          Max HR: 200 bpm (220 - 20)<br />
-          5 points: 120+ bpm<br />
-          8 points: 140+ bpm
-        </p>
+          <p><strong>For age 20:</strong></p>
+          <p>
+            Max HR: 200 bpm (220 - 20)<br />
+            5 points: 120+ bpm<br />
+            8 points: 140+ bpm
+          </p>
 
-        <p><em>User age can be set in Settings.</em></p>
+          <p><em>User age can be set in Settings.</em></p>
+        </div>
       </section>
 
       ---
@@ -167,33 +209,66 @@
         <h3 id="competitions">Competitions</h3>
         <p>
           In My Competitions, you can create or join private leagues to compete
-          against friends. Daily points are accumulated to see who will the gold medal.
+          against friends. The league is based on each participant's daily
+          points, and you can all strive to finish on the medal podium!
         </p>
-        <p>
-          Competitions require creating a cloud account (email + password) to sync your
-          points securely. To create an account, follow the prompts in My
-          Competitions and click the  <b></b>Sign Up</b> link (or <b></b>Sign In</p>b> if you've already made
-          an account).
-        </p>
-        <p>Note you can check your cloud status in Settings.</p>
+        <br />
 
-        <p> To set up a competition, give it a name, a start and end date and share the joining code with friends.</p>
-
-        <p> <b> Only</b>b> your points are shared in the cloud/with friends, <b> not your health data</b> - and you can all strive to finish on the medal podium!</b>
-        
-        </p>
-           <img
-            class="media-left-fixed"
+        <!-- Text wrapping section with floated image -->
+        <div class="text-wrap-container">
+          <img
+            class="float-left-image"
             src="images/competitonFullView.jpg"
-            alt="Workouts on, set age"
+            alt="Competition view showing leaderboard"
             style="max-width: 300px; height: auto"
           />
 
+          <p>
+            Competitions require creating a cloud account (email + password) to
+            sync your points securely. To create an account, follow the prompts
+            in My Competitions and click the <b>Sign Up</b> link (or
+            <b>Sign In</b> if you've already made an account).
+          </p>
+
+          <p>Note you can check your cloud status in Settings.</p>
+
+          <h4>Set up competition</h4>
+          <p>
+            To set up a competition, give it a name, a start and end date and
+            share the joining code with friends.
+          </p>
+          <p>
+            <b>Only</b> your points are shared in the cloud/with friends,
+            <b>not your health data.</b>
+          </p>
+
+          <h4>Join a competition</h4>
+          <p>
+            To join a competition, enter the joining code provided by the
+            competition creator. Codes are unique for each competition and are
+            listed at the bottom of the league view.
+          </p>
+        </div>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Going for Gold</p>
     </footer>
+
+    <script>
+      function toggleSection(contentId) {
+        const content = document.getElementById(contentId);
+        const chevron = document.getElementById("advanced-chevron");
+
+        if (content.classList.contains("open")) {
+          content.classList.remove("open");
+          chevron.classList.remove("rotated");
+        } else {
+          content.classList.add("open");
+          chevron.classList.add("rotated");
+        }
+      }
+    </script>
   </body>
 </html>
