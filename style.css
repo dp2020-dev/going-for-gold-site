@@ -80,33 +80,29 @@ footer {
   color: #666;
 }
 
-/* --- NEW CSS FOR LAYOUT FIX (Replace old float CSS) --- */
-
-/* 1. Sets up the container for image and text */
+/* --- VERTICAL STACKING LAYOUT --- */
+/* Container for image and text blocks */
 .media-container {
-  display: flex; /* Use Flexbox for alignment */
-  align-items: flex-start; /* Aligns items to the top (important for text flow) */
-  margin-bottom: 30px; /* Adds a clear vertical space after each block */
-  gap: 20px; /* Adds space between the image and the text */
+  display: block; /* Changed from flex to block for vertical stacking */
+  margin-bottom: 30px; /* Space after each section */
+  clear: both; /* Ensures no float interference */
 }
 
-/* 2. Styles the image within the container */
+/* Image styling - left aligned */
 .media-left-fixed {
-  /* No need for float anymore. It's automatically left by Flexbox. */
-  flex-shrink: 0; /* Prevents the image from shrinking */
-  /* max-width is handled inline, but you can set it here too if you prefer: */
-  /* max-width: 300px; */
+  display: block; /* Makes image take full line */
+  margin-bottom: 15px; /* Space between image and text below */
+  /* max-width is handled inline in HTML */
 }
 
-/* 3. Styles the paragraph next to the image */
+/* Text within media container */
 .media-container p {
-  flex-grow: 1; /* Allows the paragraph to take up remaining space */
+  margin-bottom: 15px;
 }
 
-/* Optional: Removes any old, problematic float styles */
+/* Remove any legacy float styles */
 .media-left {
-  float: none !important; /* Forces the removal of old float properties if they exist */
+  float: none !important;
   margin-right: 0 !important;
 }
-
-/* --- END OF NEW CSS --- */
+/* --- END LAYOUT FIX --- */
