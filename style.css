@@ -75,7 +75,7 @@ li {
 }
 
 footer {
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   color: #666;
 }
@@ -97,7 +97,7 @@ footer {
 
 .media-center {
   display: block;
-  margin: 20px auto;
+  margin: 20px 0;
   max-width: 300px;
   height: auto;
 }
@@ -129,4 +129,41 @@ footer {
   margin-right: 20px;
   margin-bottom: 15px;
 }
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}
+
 /* --- END LAYOUT FIX --- */
